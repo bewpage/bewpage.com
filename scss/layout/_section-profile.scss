@@ -6,7 +6,11 @@
     //background-image: url('#');
     //background-size: cover;
     //background-position: center;
+}
 
+.section__profile__article{
+    padding: 80px 100px;
+    //padding-top: 100px;
     h2{
         font-size: 54px;
         text-align: center;
@@ -14,15 +18,11 @@
     }
 }
 
-.section__profile__article{
-    padding: 50px 100px;
-}
-
 .lead{
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.4;
+    //line-height: 1.4;
     text-align: center;
     color: #727878;
 }

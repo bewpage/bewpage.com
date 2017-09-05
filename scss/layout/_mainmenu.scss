@@ -232,6 +232,7 @@
     }
 
     .header__main-nav__menu {
+        //flex-grow: 1;
         display: block;
     }
 
@@ -316,11 +317,6 @@
         height: $menu-pc-height;
     }
 
-}
-
-//1025px - big landscape tablets, laptops, and desktops
-@media only screen and (min-width:$laptop-size) {
-
     .header__main-nav {
         display: flex;
         flex-direction: row;
@@ -329,14 +325,16 @@
     }
 
     .header__main-nav__brand{
-
+        flex-grow: 1;
     }
 
 }
 
+
 //1281px - big landscape tablets, laptops, and desktops
 @media only screen and (min-width: $laptop-hi-res){
     .header__social {
+        //flex-grow: 2;
         display: block;
         overflow: hidden;
         line-height: $menu-pc-height;
