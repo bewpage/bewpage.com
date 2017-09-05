@@ -1,0 +1,29 @@
+.section__profile{
+    height: $section-header-height; //see variables...
+    width:auto;
+    margin: 0;
+    background-color: #f5f5f5;
+    //background-image: url('#');
+    //background-size: cover;
+    //background-position: center;
+
+    h2{
+        font-size: 54px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+.section__profile__article{
+    padding: 50px 100px;
+}
+
+.lead{
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
+    color: #727878;
+}
+

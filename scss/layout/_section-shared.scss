@@ -1,0 +1,23 @@
+.scroll-up{
+    display: block;
+    height: 80px;
+    width: 110px;
+    float: right;
+    background-color: #222222;
+    text-align: center;
+    z-index: 6;
+}
+
+
+.fa-chevron-up{
+    color: #FFFFFF;
+    font-size: 30px;
+    padding-right: 2px;
+    padding-top: 20px;
+    animation-name: wiggle;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+

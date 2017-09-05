@@ -1,0 +1,65 @@
+//grid system
+
+// *** view size variable
+$mobile-size: 28.75em;  //460px
+$tablets-size: 40.5em;  //650px
+$pc-size: 1150px;  //1150px to be transform
+$test: 40.5em;
+$menu-pc-height: 115px;
+$menu-tablet-height: 80px;
+$menu-mobile-height: 80px;
+
+//**** grid layout settings ****
+$site-width: 1200px;
+$column: 12;
+$gutter: 5px;
+$grid-spacing: 2%;
+$tablet-up: "only screen and (min-width: #{$tablets-size})";
+
+//mixiny lepiej umiesci mixiny w osobnym pliku
+@mixin clear() {
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: $site-width;
+    margin: 0 auto;
+
+    .row {
+        margin: 0 $gutter; //odstep pomiedzy row
+        @include clear();
+
+    [class*="col-"] {
+        float: left;
+        min-height: 1px; //musi byc minimalna wysokosc
+        width: 100%; //domyslnie col maja 100% szerokossci
+        padding: 0 $gutter;
+        margin-right: $grid-spacing;
+        margin-bottom: $grid-spacing;
+            &:last-child {
+            margin-right:0%;
+        }
+    }
+
+
+    //col-12 robimy
+    @for $i from 1 through $column {
+      .col-#{$i} {
+        @media #{$tablet-up} {
+          //width: (100%/$column) * $i;
+          width: (100%/($column/$i)) - ($grid-spacing*(($column - $i)/$column));
+        }
+      }
+    }
+  }
+}

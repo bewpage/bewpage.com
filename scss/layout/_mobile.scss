@@ -1,0 +1,21 @@
+#hero-mobile {
+    display: block;
+    background: url('../img/full_illustration.png') no-repeat center bottom / cover;
+  height: 320px;
+}
+
+#hero {
+    display: none;
+}
+
+@media only screen and (min-width: $mobile-size) {
+    //here everything bigger than mobile size
+    #hero-mobile {
+        display: none;
+    }
+
+    #hero {
+        display: block;
+    }
+
+}

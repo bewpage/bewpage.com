@@ -1,0 +1,45 @@
+//variable
+
+// *** view size variable
+$smartphone-size: 20em; //320px - smartphones, iPhone, portrait 480x320 phones
+$mobile-size: 30.063em;  //481px - portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
+$tablets-portrait-size: 40.063em;  //641px - portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+$tablets-landscape-size: 60.063em; //961px - tablet, landscape iPad, lo-res laptops ands desktops
+$laptop-size: 64.063em;  //1025px - big landscape tablets, laptops, and desktops
+$laptop-hi-res: 80.063em; //1281px - hi-res laptops and desktops
+
+
+// *** Global settings ******
+// fonts
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-playfair: 'Playfair Display', serif;
+// **** fonts colors
+$font-color-black: #000000;
+$font-color-white: #ffffff;
+
+// *** layouts settings *******
+// *** main menu
+$menu-mobile-height: 80px;
+$menu-tablet-height: 80px;
+$menu-pc-height: 115px;
+// *** main menu colors
+$main-menu-link_underline-color: #11749e;
+$main-menu-link_hover-color: #333333;
+
+// **** headers - backgrounds colors
+$temp-bg-color: #919191;
+$temp-bg-color-01: #ffff00;
+$header-bg-color: #000000;
+
+// *** header section
+$section-header-height:875px;
+$main-menu-height: 115px;
+$bronze: #130d0a;
+$white: #fff;
+$heroHeight: 800px;
+
+
+// *** content section
+$contentHeight: 800px;

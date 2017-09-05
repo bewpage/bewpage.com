@@ -1,0 +1,50 @@
+#section_header{
+    height: $section-header-height; //see variables...
+    width:auto;
+    margin: 0;
+    background-image: url('../img/p01.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+//jumbotron
+
+.header__jumbotron{
+    margin-top: -800px;
+    padding-top: 150px;
+    height: 760px;
+    width: 100%;
+    h1{
+        margin: 0;
+        padding-top: 225px;
+        font-weight: bold;
+        //font-size: 110px;
+        font-size: 3em;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    p{
+        padding-left: 0.2em;
+        color: #0c9e9c;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        //letter-spacing: 14px;
+        font-size: 1em;
+    }
+}
+
+
+
+
+@media only screen and (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media only screen and (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media only screen and (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media only screen and (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media only screen and (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media only screen and (min-width:1281px) { /* hi-res laptops and desktops */ }
+
