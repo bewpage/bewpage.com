@@ -6,9 +6,6 @@
 
 //********** menu style **********
 //********** main-nav section ****
-.header__menu-fix{
-
-}
 
 .header__main-nav{
     height: $menu-mobile-height;
@@ -45,25 +42,30 @@
 }
 
 // ****** style for fix menu *****
-.b-nav-fix{
-    z-index: 9999;
-    background: $header-bg-color;
-    height: $menu-mobile-height;
-    position: fixed;
-    width: 100%;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
+.nav-up {
+    top: -115px;
 }
 
-.f-nav-fix {
-    z-index: 9999;
-    position: fixed;
-    height: $menu-mobile-height;
-    min-width: 1200px;
-}
+    //.b-nav-fix{
+    //z-index: 9999;
+    //background: $header-bg-color;
+    //height: $menu-mobile-height;
+    //min-width: 100%;
+    //widows: 99vw;
+    //position: fixed;
+    //transition: all 1s ease;
+    //-webkit-transition: all 1s ease;
+    //-moz-transition: all 1s ease;
+    //-o-transition: all 1s ease;
+    //-ms-transition: all 1s ease;
+//}
+
+//.f-nav-fix {
+//    z-index: 9999;
+//    position: fixed;
+//    height: $menu-mobile-height;
+//    min-width: 1200px;
+//}
 
 
 //******** burger menu drop-down*******

@@ -66,35 +66,12 @@
 * {
   font-family: 'Open Sans', sans-serif; }
 
-#section_header {
-  height: 875px;
-  width: auto;
-  margin: 0;
-  background-image: url("../img/p01.jpg");
-  background-size: cover;
-  background-position: center; }
-
-.header__jumbotron {
-  margin-top: -800px;
-  padding-top: 150px;
-  height: 760px;
+.section__header {
+  height: 115px;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
   width: 100%; }
-  .header__jumbotron h1 {
-    margin: 0;
-    padding-top: 225px;
-    font-weight: bold;
-    font-size: 3em;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em; }
-  .header__jumbotron p {
-    padding-left: 0.2em;
-    color: #0c9e9c;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    font-size: 1em; }
 
 @media only screen and (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */ }
@@ -132,23 +109,8 @@
 .header__social {
   display: none; }
 
-.b-nav-fix {
-  z-index: 9999;
-  background: #000000;
-  height: 80px;
-  position: fixed;
-  width: 100%;
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease; }
-
-.f-nav-fix {
-  z-index: 9999;
-  position: fixed;
-  height: 80px;
-  min-width: 1200px; }
+.nav-up {
+  top: -115px; }
 
 .header__responsive-menu {
   display: none;
@@ -338,6 +300,45 @@
     .header__social i {
       margin-right: 20px;
       cursor: pointer; } }
+.header__jumbotron {
+  height: 875px;
+  width: auto;
+  margin: 0;
+  background-image: url("../img/p01.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.header__jumbotron {
+  width: 100%; }
+  .header__jumbotron h1 {
+    margin: 0;
+    padding-top: 225px;
+    font-weight: bold;
+    font-size: 3em;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; }
+  .header__jumbotron p {
+    padding-left: 0.2em;
+    color: #0c9e9c;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 1em; }
+
+@media only screen and (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */ }
+@media only screen and (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media only screen and (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media only screen and (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media only screen and (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */ }
+@media only screen and (min-width: 1281px) {
+  /* hi-res laptops and desktops */ }
 .scroll-up {
   display: block;
   height: 70px;
