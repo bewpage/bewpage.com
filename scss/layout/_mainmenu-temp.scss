@@ -7,37 +7,47 @@
 //********** menu style **********
 //********** main-nav section ****
 
-.header__main-nav{
+.header__main-nav-temp{
     height: $menu-mobile-height;
     color: $font-color-white;
 }
 
-.header__main-nav__menu {
+.header__main-nav__menu-temp {
     display: none;
 }
 
-.header__mobile{
+.header__mobile-temp{
     height: $menu-mobile-height;
     width: 99vw;
 }
 
 //********* brand logo **********
-.header__main-nav__brand {
+.header__main-nav__brand-temp {
     float: left;
     line-height: $menu-mobile-height;
     font-size: 1.2em;
-    cursor: pointer;
+    //border: 1px red solid;
     a{
         color: $font-color-white;
         text-decoration: none;
-        display: block;
+        //display: block;
+        //border: 1px red solid;
+
+        span{
+            //border: 1px red solid;
+
+            &:hover{
+                color: #000;
+                font-weight: bold;
+            }
+        }
 
     }
+
 }
 
-
 //********   social icons  ********
-.header__social{
+.header__social-temp{
     display: none;
 }
 
@@ -45,27 +55,6 @@
 .nav-up {
     top: -115px;
 }
-
-    //.b-nav-fix{
-    //z-index: 9999;
-    //background: $header-bg-color;
-    //height: $menu-mobile-height;
-    //min-width: 100%;
-    //widows: 99vw;
-    //position: fixed;
-    //transition: all 1s ease;
-    //-webkit-transition: all 1s ease;
-    //-moz-transition: all 1s ease;
-    //-o-transition: all 1s ease;
-    //-ms-transition: all 1s ease;
-//}
-
-//.f-nav-fix {
-//    z-index: 9999;
-//    position: fixed;
-//    height: $menu-mobile-height;
-//    min-width: 1200px;
-//}
 
 
 //******** burger menu drop-down*******
@@ -189,10 +178,11 @@
 }
 
 
-//responsive design mobile first
+// **************** responsive design mobile first **************
 
 @media only screen and (min-width: $mobile-size) {
-    //here everything bigger than mobile size
+    /*here everything bigger than mobile size
+    smartphones, iPhone, portrait 480x320 phones */
 
 }
 
@@ -206,7 +196,7 @@
         line-height: $menu-tablet-height;
     }
 
-    .header__main-nav__brand {
+    .header__main-nav__brand-temp {
         width: auto;
         flex-grow: 2;
     }
@@ -224,11 +214,7 @@
 //1025px - big landscape tablets, laptops, and desktops
 @media only screen and (min-width: $laptop-size) {
 
-    .header__mobile {
-        display: none;
-    }
-
-    .header__main-nav{
+    .header__main-nav-temp{
         height: $menu-pc-height;
         color: $font-color-white;
     }
@@ -237,12 +223,12 @@
         flex-grow: 1;
     }
 
-    .header__main-nav__menu {
+    .header__main-nav__menu-temp {
         //flex-grow: 1;
         display: block;
     }
 
-    .header__main-nav__brand {
+    .header__main-nav__brand-temp {
         width: auto;
         line-height: $menu-pc-height;
     }
@@ -252,7 +238,7 @@
     }
 
 
-    .header__main-nav__menu {
+    .header__main-nav__menu-temp {
 
         li{
             text-align: center;
@@ -315,14 +301,14 @@
         height: $menu-pc-height;
     }
 
-    .header__main-nav {
+    .header__main-nav-temp {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
 
-    .header__main-nav__brand{
+    .header__main-nav__brand-temp{
         flex-grow: 1;
     }
 
@@ -331,14 +317,15 @@
 
 //1281px - big landscape tablets, laptops, and desktops
 @media only screen and (min-width: $laptop-hi-res){
-    .header__social {
+    .header__social-temp {
         //flex-grow: 2;
         display: block;
         overflow: hidden;
         line-height: $menu-pc-height;
         a{
             color: #ffffff;
-            :hover{
+            //border: 1px red solid;
+            &:hover{
                 color: #000;
             }
             i{

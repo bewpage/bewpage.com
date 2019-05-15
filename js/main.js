@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function applyClickEvent() {
+        var linksTest = $('a[href*="#"]');
+        console.log('test link', linksTest);
         $('a[href*="#"]').on('click', function (e) {
             e.preventDefault();
 

@@ -1,11 +1,16 @@
+@import 'layout/_body-temp'; //this is only temp file
+
 @import 'helpers/_helpers';
+@import 'helpers/particles-temp';
+@import 'base/_variables';
 @import 'base/_grid_v1_0';
 @import 'base/_fonts';
-@import 'base/_variables';
-//@import 'layout/_mobile';
+@import 'layout/_mobile';
 @import 'layout/_header';
 @import 'layout/mainmenu';
+@import 'layout/mainmenu-temp';
 @import 'layout/_section-jumbotron';
+@import 'layout/section-jumbotron-temp';
 @import 'layout/_section-shared';
 @import 'layout/_section-profile';
 @import 'layout/_section-experience';

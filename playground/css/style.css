@@ -1,0 +1,58 @@
+/*
+ =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    /*font:normal 75% Arial, Helvetica, sans-serif;*/
+}
+
+canvas{
+    display:block;
+    vertical-align:bottom;
+}
+
+
+/* ---- particles.js container ---- */
+.container{
+    height: 100%;
+    width: auto;
+    margin: 0;
+    background-image: url('../img/p01.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+
+#particles-js{
+    background: #000000;
+    /*z-index: -9999;*/
+}
+
+.header__social{
+    display: block;
+}
+
+.test{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    z-index: 9999;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+.test h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.test h3 {
+    font-size: 0.9em;
+}
