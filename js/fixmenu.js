@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function positionElement(element){
         var eTop = element.offset().top;
         $(window).scroll(function (){
-                return eTop - $(window).scrollTop();
+                return Math.floor(eTop - $(window).scrollTop());
             });
-        return eTop - $(window).scrollTop();
+        return Math.floor(eTop - $(window).scrollTop());
     }
 
     function checkClassExist(){
