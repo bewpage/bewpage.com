@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function checkClassExist(){
         var windowElement = positionElement($('#profile'));
+        console.log('element position', windowElement);
         if(header.is('.nav-up') && windowElement === 0){
             return false;
         } else if(!header.is('.nav-up') && windowElement === 0){
