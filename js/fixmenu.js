@@ -1,15 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    // var nav = $('.header__main-nav');
     var header = $('header');
+    var headerTest = $('header.section__header');
     var bgNav = $('.header__menu-fix');
     var mobileNav = $('#nav-icon1');
     var dropDownMenu = $('.header__responsive-menu');
-    // var hamburgerAnimation = $('#nav-icon1');
     var hamburgerNav = $('.nav-icon');
+    var chevronIcon = $('section.section__profile div.container a');
 
 
+    function checkClassExist(){
+        var windowPosition = $(window).scrollTop();
+        if(header.is('.nav-up') && windowPosition === 875){
+            return false;
+        } else if(!header.is('.nav-up') && windowPosition === 875){
+            $('html, body').animate({scrollTop: '-=115px'}, 800);
+            return true;
+        }
+    }
 
 //function to have current width of the browser window
 
@@ -69,35 +78,41 @@ document.addEventListener("DOMContentLoaded", function() {
             if (st > lastScrollTop && st > navbarHeight){
                 // Scroll Down
                 //$('nav').removeClass('header__main-nav');
+                chevronIcon.addClass('scroll-up');
                 header.addClass('nav-up');
                 //bgNav.removeClass('b-nav-fix');
                 //hamburgerNav.removeClass('b-nav-fix');
                 dropDownMenu.removeClass('expand');
                 mobileNav.removeClass('open');
                 // hamburgerAnimation.removeClass('open');
+                checkClassExist();
+                // console.log()
 
                 //scroll up
             } else if ((st + $(window).height() < $(document).height())){
                 header.removeClass('nav-up');
                 header.css('background', '#000000');
                 $('.toggle-nav-click').css('background', '#000000'); //color for hamburger
+                checkClassExist();
             }
 
             lastScrollTop = st;
 
             //scroll position top
             if (st === 0){
-                // header.removeClass('nav-up').addClass('header__main-nav');
                 header.css('background', 'none');
                 hamburgerNav.removeClass('b-nav-fix');
                 mobileNav.attr('id','nav-icon1');
-                // hamburgerAnimation.attr('id','nav-icon1');
+                chevronIcon.removeClass('scroll-up');
                 $('.toggle-nav-click').css('background', 'none'); //bg color for hamburger
             }
         }
     }
 
+
+
     $(window).ready(function () {
+        chevronIcon.removeClass('scroll-up');
         navScroll();
     });
 
