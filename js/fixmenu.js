@@ -10,12 +10,19 @@ document.addEventListener("DOMContentLoaded", function() {
     var chevronIcon = $('section.section__profile div.container a');
 
 
+    function positionElement(element){
+        var eTop = element.offset().top;
+        $(window).scroll(function (){
+                return eTop - $(window).scrollTop();
+            });
+        return eTop - $(window).scrollTop();
+    }
+
     function checkClassExist(){
-        var windowPosition = $(window).scrollTop();
-        console.log('window position', windowPosition);
-        if(header.is('.nav-up') && windowPosition === 875){
+        var windowElement = positionElement($('#profile'));
+        if(header.is('.nav-up') && windowElement === 0){
             return false;
-        } else if(!header.is('.nav-up') && windowPosition === 875){
+        } else if(!header.is('.nav-up') && windowElement === 0){
             $('html, body').animate({scrollTop: '-=115px'}, 800);
             return true;
         }
