@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function checkClassExist(){
         var windowPosition = $(window).scrollTop();
+        console.log('window position', windowPosition);
         if(header.is('.nav-up') && windowPosition === 875){
             return false;
         } else if(!header.is('.nav-up') && windowPosition === 875){
