@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
+    // color variable
+    var menuBackgroungColor = '#222222';
+
     var header = $('header');
     var headerTest = $('header.section__header');
     var bgNav = $('.header__menu-fix');
@@ -19,13 +22,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function checkClassExist(){
-        var windowElement = positionElement($('#profile'));
+        var sectionProfile = positionElement($('#profile'));
         // console.log('element position', windowElement);
-        if(header.is('.nav-up') && windowElement === 0){
+        if(header.is('.nav-up') && sectionProfile === 0){
             return false;
-        } else if(!header.is('.nav-up') && windowElement === 0){
-            $('html, body').animate({scrollTop: '-=115px'}, 800);
-            return true;
+        } else if (!header.is('.nav-up') && sectionProfile === 0){
+            if($(window).width() < 1025) {
+                $('html, body').animate({scrollTop: '-=80px'}, 800);
+                return true;
+            }else {
+                $('html, body').animate({scrollTop: '-=115px'}, 800);
+                return true;
+            }
         }
     }
 
@@ -46,11 +54,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //drop down menu
     mobileNav.on('click', function(e) {
+        e.preventDefault();
+
+        var navIcon = $('#nav-icon1');
+        var headerJumbotron = $('.header__jumbotron');
         dropDownMenu.toggleClass('expand');
         mobileNav.toggleClass('toggle-nav-click');
         mobileNav.toggleClass('open');
-        // hamburgerAnimation.toggleClass('open');
-        e.preventDefault();
+        if(positionElement(headerJumbotron) === 0 && navIcon.is('.open')){
+            header.css('background', menuBackgroungColor);
+        }else if(positionElement(headerJumbotron) === 0 && !navIcon.is('.open')){
+            header.css('background', 'none');
+        }
     });
 
     // hide nav bar when scroll
@@ -86,22 +101,17 @@ document.addEventListener("DOMContentLoaded", function() {
             // This is necessary so you never see what is "behind" the navbar.
             if (st > lastScrollTop && st > navbarHeight){
                 // Scroll Down
-                //$('nav').removeClass('header__main-nav');
                 chevronIcon.addClass('scroll-up');
                 header.addClass('nav-up');
-                //bgNav.removeClass('b-nav-fix');
-                //hamburgerNav.removeClass('b-nav-fix');
                 dropDownMenu.removeClass('expand');
                 mobileNav.removeClass('open');
-                // hamburgerAnimation.removeClass('open');
                 checkClassExist();
-                // console.log()
 
                 //scroll up
             } else if ((st + $(window).height() < $(document).height())){
                 header.removeClass('nav-up');
-                header.css('background', '#000000');
-                $('.toggle-nav-click').css('background', '#000000'); //color for hamburger
+                header.css('background', menuBackgroungColor);
+                $('.toggle-nav-click').css('background', menuBackgroungColor); //color for hamburger
                 checkClassExist();
             }
 

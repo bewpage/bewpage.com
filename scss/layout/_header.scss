@@ -1,5 +1,6 @@
 .section__header{
-    height: $menu-pc-height;
+    //height: $menu-pc-height;
+    height: $menu-mobile-height;
     position: fixed;
     top: 0;
     transition: top 0.2s ease-in-out;
@@ -8,10 +9,20 @@
 
 
 
-@media only screen and (min-width:$smartphone-size) { /* smartphones, iPhone, portrait 480x320 phones */ }
-@media only screen and (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+
+@media only screen and (min-width: $mobile-size) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+}
 @media only screen and (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
 @media only screen and (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media only screen and (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+
+@media only screen and (min-width: $laptop-size) {
+    /* big landscape tablets, laptops, and desktops */
+    .section__header{
+        height: $menu-pc-height;
+    }
+
+}
 @media only screen and (min-width:1281px) { /* hi-res laptops and desktops */ }
 

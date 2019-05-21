@@ -1,29 +1,17 @@
+/* ---- mobile first ---- */
 .section__profile{
-    height: $section-header-height; //see variables...
-    width:auto;
-    margin: 0;
     background-color: #f5f5f5;
     //background-image: url('#');
     //background-size: cover;
     //background-position: center;
 }
 
-.section__profile__article{
-    padding: 80px 100px;
-    //padding-top: 100px;
-    h2{
-        font-size: 54px;
-        text-align: center;
-        text-transform: capitalize;
-    }
-}
 
-.lead{
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: 300;
-    //line-height: 1.4;
-    text-align: center;
-    color: #727878;
+/* here everything bigger than mobile size */
+@media only screen and (min-width: $mobile-size) {
+
+    .section__profile__article{
+
+    }
 }
 

@@ -11,13 +11,16 @@ $laptop-hi-res: 80.063em; //1281px - hi-res laptops and desktops
 
 // *** Global settings ******
 // fonts
-
 $font-montserrat: 'Montserrat', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
 $font-playfair: 'Playfair Display', serif;
 // **** fonts colors
 $font-color-black: #000000;
-$font-color-white: #ffffff;
+$color-black: #000000;
+$color-white: #ffffff;
+// **** fonts size
+$base-font-size: 16px;
+
 
 // *** layouts settings *******
 // *** main menu
@@ -27,17 +30,17 @@ $menu-pc-height: 115px;
 // *** main menu colors
 $main-menu-link_underline-color: #11749e;
 $main-menu-link_hover-color: #333333;
+$popup-menu-bg-color: #222222;
 
 // **** headers - backgrounds colors
 $temp-bg-color: #919191;
 $temp-bg-color-01: #ffff00;
-$header-bg-color: #000000;
+$header-bg-color: #222222;
 
 // *** header section
 $section-header-height: 875px;
 $main-menu-height: 115px;
 $bronze: #130d0a;
-$white: #fff;
 $heroHeight: 800px;
 
 

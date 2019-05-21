@@ -1,24 +1,67 @@
 .scroll-up{
     display: block;
-    height: 70px;
-    width: 110px;
+    height: 50px;
+    width: 90px;
     float: right;
-    background-color: #222222;
+    background-color: $header-bg-color;
     text-align: center;
     z-index: 6;
 }
 
 
 .fa-chevron-up{
-    color: #FFFFFF;
-    font-size: 30px;
-    padding-right: 2px;
-    padding-top: 15px;
-    //animation-name: wiggle;
-    //animation-duration: 1.2s;
-    //animation-timing-function: linear;
-    //animation-iteration-count: infinite;
-    //animation-direction: normal;
+    color: $color-white;
+    font-size: 2rem !important;
+    padding-top: 10px;
+    }
+
+
+/* section shared style ---- mobile first  ---- */
+
+
+.section__profile, .section__experience{
+    height: $section-header-height; //see variables...
+    width:auto;
+    margin: 0;
+}
+
+.section__profile__article, .section__experience__article{
+    padding: 80px 50px;
+    h2{
+        font-size: 2.125rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+.lead{
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    //line-height: 1.4;
+    text-align: center;
+    color: #727878;
 }
 
 
+/* here everything bigger than mobile size */
+@media only screen and (min-width: $mobile-size) {
+
+    .scroll-up{
+        height: 70px;
+        width: 110px;
+    }
+
+
+    .fa-chevron-up{
+        font-size: 3rem !important;
+        padding-top: 15px;
+    }
+
+    .section__profile__article, .section__experience__article{
+        padding: 80px 100px;
+        h2{
+            font-size: 3.375rem;
+        }
+    }
+}

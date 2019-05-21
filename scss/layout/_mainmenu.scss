@@ -9,7 +9,7 @@
 
 .header__main-nav{
     height: $menu-mobile-height;
-    color: $font-color-white;
+    color: $color-white;
 }
 
 .header__main-nav__menu {
@@ -25,10 +25,11 @@
 .header__main-nav__brand {
     float: left;
     line-height: $menu-mobile-height;
-    font-size: 1.2em;
+    font-size: 	1.25rem;
     cursor: pointer;
+    margin-left: 5px;
     a{
-        color: $font-color-white;
+        color: $color-white;
         text-decoration: none;
         display: block;
 
@@ -45,27 +46,6 @@
 .nav-up {
     top: -115px;
 }
-
-    //.b-nav-fix{
-    //z-index: 9999;
-    //background: $header-bg-color;
-    //height: $menu-mobile-height;
-    //min-width: 100%;
-    //widows: 99vw;
-    //position: fixed;
-    //transition: all 1s ease;
-    //-webkit-transition: all 1s ease;
-    //-moz-transition: all 1s ease;
-    //-o-transition: all 1s ease;
-    //-ms-transition: all 1s ease;
-//}
-
-//.f-nav-fix {
-//    z-index: 9999;
-//    position: fixed;
-//    height: $menu-mobile-height;
-//    min-width: 1200px;
-//}
 
 
 //******** burger menu drop-down*******
@@ -101,7 +81,7 @@
 }
 .header__responsive-menu__menu li a:hover {
     background:#3e3436;
-    color: #ffffff;
+    color: $color-white;
 }
 
 
@@ -134,7 +114,7 @@
         height: 7px;
         width: 100%;
         //background: #d3531a;
-        background: #ffffff;
+        background: $color-white;
         border-radius: 7px;
         opacity: 1;
         right: 0;
@@ -189,19 +169,16 @@
 }
 
 
-//responsive design mobile first
+/* ---- responsive design mobile first ---- */
 
 @media only screen and (min-width: $mobile-size) {
     //here everything bigger than mobile size
+
 
 }
 
 
 @media only screen and (min-width: $tablets-portrait-size) {
-    body{
-        font-size: 16px;
-    }
-
     .toggle-nav {
         line-height: $menu-tablet-height;
     }
@@ -230,7 +207,7 @@
 
     .header__main-nav{
         height: $menu-pc-height;
-        color: $font-color-white;
+        color: $color-white;
     }
 
     .header__main-nav__nav{
@@ -269,9 +246,8 @@
 
             a{
                 line-height: $menu-pc-height;
-                font-size: 16px;
                 text-decoration: none;
-                color: $font-color-white;
+                color: $color-white;
             }
             //underline active link effect
             a:before {
@@ -337,9 +313,9 @@
         overflow: hidden;
         line-height: $menu-pc-height;
         a{
-            color: #ffffff;
+            color: $color-white;
             :hover{
-                color: #000;
+                color: $color-black;
             }
             i{
                 margin-right: 20px;
