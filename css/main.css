@@ -1,3 +1,65 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .container .row {
+    margin: 0 5px; }
+    .container .row:before, .container .row:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both; }
+    .container .row [class*="col-"] {
+      float: left;
+      min-height: 1px;
+      width: 100%;
+      padding: 0 5px;
+      margin-right: 2%;
+      margin-bottom: 2%; }
+      .container .row [class*="col-"]:last-child {
+        margin-right: 0; }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-1 {
+        width: 6.5%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-2 {
+        width: 15%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-3 {
+        width: 23.5%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-4 {
+        width: 32%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-5 {
+        width: 40.5%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-6 {
+        width: 49%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-7 {
+        width: 57.5%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-8 {
+        width: 66%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-9 {
+        width: 74.5%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-10 {
+        width: 83%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-11 {
+        width: 91.5%; } }
+    @media only screen and (min-width: 40.063em) {
+      .container .row .col-12 {
+        width: 100%; } }
+
 :root {
   font-size: 16px; }
 
@@ -10,64 +72,8 @@
 .float__right {
   float: right; }
 
-* {
-  box-sizing: border-box; }
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
-  .container .row {
-    margin: 0 5px; }
-    .container .row:before, .container .row:after {
-      content: "";
-      display: block;
-      clear: both; }
-    .container .row [class*="col-"] {
-      float: left;
-      min-height: 1px;
-      width: 100%;
-      padding: 0 5px;
-      margin-right: 2%;
-      margin-bottom: 2%; }
-      .container .row [class*="col-"]:last-child {
-        margin-right: 0%; }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-1 {
-        width: 6.5%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-2 {
-        width: 15%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-3 {
-        width: 23.5%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-4 {
-        width: 32%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-5 {
-        width: 40.5%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-6 {
-        width: 49%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-7 {
-        width: 57.5%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-8 {
-        width: 66%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-9 {
-        width: 74.5%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-10 {
-        width: 83%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-11 {
-        width: 91.5%; } }
-    @media only screen and (min-width: 40.5em) {
-      .container .row .col-12 {
-        width: 100%; } }
+.borderbox {
+  border: 1px solid red; }
 
 * {
   font-family: 'Open Sans', sans-serif; }
@@ -134,8 +140,7 @@
   top: -115px; }
 
 .header__responsive-menu {
-  display: none;
-  position: relative; }
+  display: none; }
 
 .expand {
   display: block !important; }
@@ -328,11 +333,23 @@
 .header__jumbotron {
   height: 875px;
   width: auto;
+  max-width: 100%;
   margin: 0;
   background-image: url("../img/p01.jpg");
   background-size: cover;
   background-position: center; }
 
+/* -- jumbotron scroll down arrow -- */
+.header__jumbotron_scroll-down a {
+  position: absolute;
+  top: 80vh;
+  left: 50vw; }
+  .header__jumbotron_scroll-down a .fa-chevron-down {
+    color: #ffffff;
+    font-size: 2rem !important;
+    padding-top: 10px; }
+
+/* -- jumbotron -- */
 .header__jumbotron {
   width: 100%; }
   .header__jumbotron h1 {
@@ -354,7 +371,10 @@
 
 @media only screen and (min-width: 28.75em) {
   .header__jumbotron h1 {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+
+  .header__jumbotron_scroll-down .fa-chevron-down {
+    font-size: 3rem !important; } }
 @media only screen and (min-width: 40.063em) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
 @media only screen and (min-width: 60.063em) {
@@ -363,6 +383,10 @@
   /* big landscape tablets, laptops, and desktops */ }
 @media only screen and (min-width: 80.063em) {
   /* hi-res laptops and desktops */ }
+/* -- section shared style ---- arrow up style --- */
+.chevron__container {
+  display: block; }
+
 .scroll-up {
   display: block;
   height: 50px;
@@ -379,7 +403,8 @@
 
 /* section shared style ---- mobile first  ---- */
 .section__profile, .section__experience {
-  height: 875px;
+  min-height: 875px;
+  height: 100%;
   width: auto;
   margin: 0; }
 
@@ -420,9 +445,20 @@
   color: #ffffff; }
 
 .section__experience {
-  background-color: #AB987A;
-  background-image: url("#");
-  background-size: cover;
-  background-position: center; }
+  background-color: #AB987A; }
+
+.section__experience__image {
+  height: auto;
+  justify-content: inherit;
+  align-items: inherit; }
+
+.section__experience__image img {
+  display: block;
+  margin: auto; }
+
+@media only screen and (min-width: 28.75em) {
+  .test_foto_01 {
+    background-image: url("../img/sit_on_chair_300.jpg");
+    height: 300px; } }
 
 /*# sourceMappingURL=main.css.map */

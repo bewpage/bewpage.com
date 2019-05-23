@@ -30,13 +30,13 @@
         <!-- *********** Header Section ********* -->
         <header class="section__header">
             <div class="header__menu-fix">
-                <div class="container test borderbox">
+                <div class="container">
                     <nav class="header__main-nav">
-                        <div class="header__main-nav__brand borderbox">
+                        <div class="header__main-nav__brand">
                             <a href="#section_header">bartek jedlinski</a>
                         </div>
                         <div class="header__main-nav__nav">
-                            <ul class="header__main-nav__menu borderbox">
+                            <ul class="header__main-nav__menu">
                                 <li><a href="#profile">Profile</a></li>
                                 <li><a href="#experience">Experience</a></li>
                                 <li><a href="#abilities">Abilities</a></li>
@@ -44,7 +44,7 @@
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
-                        <div class="header__social borderbox">
+                        <div class="header__social">
 <!--                            <i class="fa fa-facebook" aria-hidden="true"></i>-->
 <!--                            <i class="fa fa-twitter" aria-hidden="true"></i>-->
 <!--                            <i class="fa fa-skype" aria-hidden="true"></i>-->
@@ -52,14 +52,14 @@
                         </div>
                         <div class="header__mobile">
                             <div class="toggle-nav">
-                                <div id="nav-icon1" class=" borderbox">
+                                <div id="nav-icon1" >
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </div>
                             </div>
                             <div class="header__responsive-menu">
-                                <ul class="header__responsive-menu__menu borderbox">
+                                <ul class="header__responsive-menu__menu">
                                     <li><a href="#profile">Profile</a></li>
                                     <li><a href="#experience">Experience</a></li>
                                     <li><a href="#abilities">Abilities</a></li>
@@ -72,17 +72,22 @@
                 </div>
             </div>
         </header>
-        <section class="header__jumbotron borderbox">
+        <section class="header__jumbotron">
             <div class="container">
                 <div class="">
                     <h1>creative text</h1>
                     <p>design by bartek</p>
                 </div>
             </div>
+            <div class="header__jumbotron_scroll-down">
+                <a href="#" class="">
+                    <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
+                </a>
+            </div>
         </section>
         <!-- *********** Section 01 -- PROFILE -- ********* -->
         <section class="section__profile" id="profile">
-            <div class="container">
+            <div class="container chevron__container">
                     <a href="#header__top" class="scroll-up">
                         <i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
                     </a>
@@ -109,8 +114,73 @@
             </div>
             <article class="section__experience__article">
                 <div class="container">
-                    <h2>experience</h2>
-                    <p class="lead white-text">Here some information about my works</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>experience</h2>
+                            <p class="lead white-text">Here some information about my works</p>
+                            <hr>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4 ">
+                                        <figure class="section__experience__image">
+                                            <img src="img/sit_on_chair_150.jpg"
+                                                 srcset="
+                                         img/sit_on_chair_150.jpg 481w,
+                                         img/sit_on_chair_300.jpg 641w,
+                                         img/sit_on_chair_@2x.jpg 2000w"
+                                                 sizes="(min-width: 481px) 641px, 100vw"
+                                                 alt="sit_on_chair"/>
+                                            <figcaption>
+                                                <p>text caption</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4 ">
+                                        <figure class="section__experience__image">
+                                            <img src="img/sit_on_chair_150.jpg"
+                                                 srcset="
+                                         img/sit_on_chair_150.jpg 481w,
+                                         img/sit_on_chair_300.jpg 641w,
+                                         img/sit_on_chair_@2x.jpg 2000w"
+                                                 sizes="(min-width: 481px) 641px, 100vw"
+                                                 alt="sit_on_chair"/>
+                                            <figcaption>
+                                                <p>text caption</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4 ">
+                                        <figure class="section__experience__image">
+                                            <img src="img/sit_on_chair_150.jpg"
+                                                 srcset="
+                                         img/sit_on_chair_150.jpg 481w,
+                                         img/sit_on_chair_300.jpg 641w,
+                                         img/sit_on_chair_@2x.jpg 2000w"
+                                                 sizes="(min-width: 481px) 641px, 100vw"
+                                                 alt="sit_on_chair"/>
+                                            <figcaption>
+                                                <p>text caption</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- *********** Section 03 ********* -->
+        <section  class="section__profile" id="abilities">
+            <div class="container">
+                <a href="#header__top" class="scroll-up">
+                    <i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+                </a>
+            </div>
+            <article class="section__profile__article">
+                <div class="container">
+                    <h2>abilities</h2>
+                    <p class="lead">Add some text and design properly</p>
                     <hr>
                 </div>
                 <div class="container">
@@ -120,8 +190,6 @@
                 </div>
             </article>
         </section>
-        <!-- *********** Section 03 ********* -->
-        <section></section>
 
 
         <!-- *********** JavaScript ********* -->

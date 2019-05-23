@@ -1,3 +1,8 @@
+/* -- section shared style ---- arrow up style --- */
+.chevron__container{
+    display: block;
+}
+
 .scroll-up{
     display: block;
     height: 50px;
@@ -20,7 +25,9 @@
 
 
 .section__profile, .section__experience{
-    height: $section-header-height; //see variables...
+    //height: $section-header-height; //see variables...
+    min-height: $section-header-height;
+    height: 100%;
     width:auto;
     margin: 0;
 }

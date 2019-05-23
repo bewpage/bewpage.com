@@ -2,7 +2,6 @@
 
 // *** view size variable
 $mobile-size: 28.75em;  //460px
-$tablets-size: 40.5em;  //650px
 $pc-size: 1150px;  //1150px to be transform
 $test: 40.5em;
 $menu-pc-height: 115px;
@@ -14,14 +13,18 @@ $site-width: 1200px;
 $column: 12;
 $gutter: 5px;
 $grid-spacing: 2%;
-$tablet-up: "only screen and (min-width: #{$tablets-size})";
+$mobile-up: "only screen and (min-width: #{$mobile-size})";
+$tablet-up: "only screen and (min-width: #{$tablets-portrait-size})";
+
 
 //mixiny lepiej umiesci mixiny w osobnym pliku
 @mixin clear() {
     &:before,
     &:after {
-        content: "";
+        content: ".";
+        visibility: hidden;
         display: block;
+        height: 0;
         clear: both;
     }
 }
@@ -34,6 +37,7 @@ $tablet-up: "only screen and (min-width: #{$tablets-size})";
     width: 100%;
     max-width: $site-width;
     margin: 0 auto;
+    overflow: hidden;
 
     .row {
         margin: 0 $gutter; //odstep pomiedzy row
@@ -47,17 +51,15 @@ $tablet-up: "only screen and (min-width: #{$tablets-size})";
         margin-right: $grid-spacing;
         margin-bottom: $grid-spacing;
             &:last-child {
-            margin-right:0%;
+            margin-right:0;
         }
     }
 
-
-    //col-12 robimy
-    @for $i from 1 through $column {
+        //col-12
+        @for $i from 1 through $column {
       .col-#{$i} {
-        @media #{$tablet-up} {
-          //width: (100%/$column) * $i;
-          width: (100%/($column/$i)) - ($grid-spacing*(($column - $i)/$column));
+          @media #{$tablet-up} {
+               width: (100%/($column/$i)) - ($grid-spacing*(($column - $i)/$column));
         }
       }
     }

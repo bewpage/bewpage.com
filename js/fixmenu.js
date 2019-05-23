@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // This is necessary so you never see what is "behind" the navbar.
             if (st > lastScrollTop && st > navbarHeight){
                 // Scroll Down
+                $('.chevron__container').css('display', 'block');
                 chevronIcon.addClass('scroll-up');
                 header.addClass('nav-up');
                 dropDownMenu.removeClass('expand');
@@ -121,8 +122,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (st === 0){
                 header.css('background', 'none');
                 hamburgerNav.removeClass('b-nav-fix');
-                mobileNav.attr('id','nav-icon1');
                 chevronIcon.removeClass('scroll-up');
+                $('.chevron__container').css('display', 'none');
                 $('.toggle-nav-click').css('background', 'none'); //bg color for hamburger
             }
         }
@@ -131,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     $(window).ready(function () {
-        chevronIcon.removeClass('scroll-up');
+        $('.chevron__container').css('display', 'none');
         navScroll();
     });
 

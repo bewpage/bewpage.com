@@ -1,6 +1,7 @@
 .header__jumbotron{
     height: $section-header-height; //see variables...
     width:auto;
+    max-width: 100%;
     margin: 0;
     background-image: url('../img/p01.jpg');
     background-size: cover;
@@ -8,7 +9,26 @@
 }
 
 
-//jumbotron
+/* -- jumbotron scroll down arrow -- */
+
+.header__jumbotron_scroll-down{
+
+    a {
+        position: absolute;
+        top: 80vh;
+        left: 50vw;
+
+
+        .fa-chevron-down{
+            color: $color-white;
+            font-size: 2rem !important;
+            padding-top: 10px;
+        }
+    }
+}
+
+
+/* -- jumbotron -- */
 
 .header__jumbotron{
     //margin-top: -800px;
@@ -44,6 +64,13 @@
             font-size: 3rem;
         }
     }
+
+    .header__jumbotron_scroll-down{
+        .fa-chevron-down{
+            font-size: 3rem !important;
+        }
+    }
+
 }
 
 @media only screen and (min-width: $tablets-portrait-size) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }

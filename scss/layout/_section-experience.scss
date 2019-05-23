@@ -4,9 +4,28 @@
 
 .section__experience{
     background-color: #AB987A;
-    background-image: url('#');
-    background-size: cover;
-    background-position: center;
+}
+
+
+.section__experience__image{
+    height: auto;
+    justify-content: inherit;
+    align-items: inherit;
+
+
+}
+
+.section__experience__image img{
+    display: block;
+    margin: auto;
+}
+
+
+@media only screen and (min-width: $mobile-size) {
+    .test_foto_01{
+        background-image: url("../img/sit_on_chair_300.jpg");
+        height: 300px;
+    }
 }
 
 
